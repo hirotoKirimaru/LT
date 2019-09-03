@@ -1,0 +1,30 @@
+{
+  "name": "mdx-deck-presentation",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build --no-html deck.mdx & cpx \"images/*\" ./dist/images",
+    "pdf": "mdx-deck pdf --width 1377 --height 756 deck.mdx",
+    "screenshot": "mdx-deck screenshot --width 1580 --height 830 deck.mdx",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "file-loader": "^3.0.1",
+    "gh-pages": "^2.0.1",
+    "mdx-deck": "^3.0.9",
+    "mdx-deck-code-surfer": "^0.5.5",
+    "raw-loader": "^1.0.0",
+    "react-syntax-highlighter": "^9.0.1"
+  },
+  "dependencies": {
+    "@glorious/demo": "^0.8.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "styled-components": "^4.1.3"
+  }
+}
