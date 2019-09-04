@@ -1,4 +1,7 @@
 export { default as theme } from './components/theme'
+// import condensed from '@mdx-deck/themes'
+import shadesOfPurple from "prism-react-renderer/themes/shadesOfPurple"
+
 import { Appear, Head, Notes, Image } from 'mdx-deck'
 import { Invert, Split, FullScreenCode } from 'mdx-deck/layouts'
 import { CodeSurfer } from 'mdx-deck-code-surfer'
@@ -155,7 +158,7 @@ export default LayoutAlignCenter
 <CodeSurfer
   title={() => (<h2>サンプル<span style={{color: '#f46f55'}}>.mdx</span></h2>)}
   lang='markdown'
-  theme={nightOwl}
+  theme={shadesOfPurple}
   dark={false}
   code={require('!raw-loader!./snippets/sample-slide.mdx')}
   steps={[
