@@ -5,7 +5,6 @@ import shadesOfPurple from "prism-react-renderer/themes/shadesOfPurple"
 import { Appear, Head, Notes, Image } from 'mdx-deck'
 import { Invert, Split, FullScreenCode } from 'mdx-deck/layouts'
 import { CodeSurfer } from 'mdx-deck-code-surfer'
-import nightOwl from 'prism-react-renderer/themes/nightOwl'
 import Box from 'superbox'
 import styled from 'styled-components'
 import {
@@ -31,11 +30,9 @@ import {
 
 <hr/>
 
-##### 2019/2/1　[WEBエンジニア勉強会 #11](https://web-engineer-meetup.connpass.com/event/115444/)
+##### 2019/9/6　[WEBエンジニア勉強会 #11](https://web-engineer-meetup.connpass.com/event/115444/)
 
-##### [@inouetakumon](https://twitter.com/inouetakumon):tomato:
-
-###### このスライドのソースは[コチラ](https://github.com/Takumon/mdx-deck-sample)
+##### [@nainaistar](https://twitter.com/nainaistar):tomato:
 
 <hr/>
 
@@ -46,30 +43,9 @@ export default LayoutAlignCenter
 
 <Avatar />
 
-* 名前：たくもん([@inouetakumon](https://twitter.com/inouetakumon))
-* 仕事：SIer
+* 名前：きり丸([@nainaistar](https://twitter.com/nainaistar))
+* 仕事：通信会社所属
 * 言語：Java、JavaScript
-* 趣味：[ブログ](https://takumon.com)、[Qiita](https://qiita.com/Takumon)
-
----
-export default LayoutAlignCenter
-
-### [たくもんブログ :tomato:](https://takumon.com)
-
-<small>GatsbyJS製。週１で更新してます。</small>
-
-<iframe 
-  style={{
-    width: '90vw',
-    height: '75vh',
-    background: 'white',
-  }}
-  src={'https://takumon.com'}
-  ></iframe>
-
----
-
-ここから本題
 
 ---
 export default LayoutMarkdown
@@ -419,7 +395,7 @@ export default LayoutMarkdown
   title={()=>(<h3>Code-Surferでできること</h3>)}
   code={require("!raw-loader!./snippets/my-snippet.js")}
   showNumbers={true}
-  theme={nightOwl}
+  theme={shadesOfPurple}
   lang="javascript"
   dark={true}
   steps={[
@@ -510,20 +486,3 @@ export default Invert
 # :tomato:おしまい:tomato:
 
 ##### 🙇 ご清聴ありがとうございました 🙇
-###### このスライドのソースは[コチラ](https://github.com/Takumon/mdx-deck-sample)
-
-
----
-
-export default LayoutMarkdown
-
-## 📋 参考資料
-
-* [MDX](https://mdxjs.com/)
-* [jxnblk/mdx-deck: MDX-based presentation decks](https://github.com/jxnblk/mdx-deck)
-* [JReinhold/mdx-deck-live-code: A component for mdx-deck to live code in your slides. 🤯](https://github.com/JReinhold/mdx-deck-live-code)
-* [pomber/code-surfer: React component for scrolling, zooming and highlighting code samples <🏄/>](https://github.com/pomber/code-surfer)
-* [kentcdodds/simply-react](https://github.com/kentcdodds/simply-react)
-* [SaraVieira/99-problems-graphql-aint-one: Talk for LvivJS 2018](https://github.com/SaraVieira/99-problems-graphql-aint-one)
-* [Highlight, Scroll, & Zoom Code Snippets in mdx-deck with Code Surfer <🏄/> · Manorisms](https://elijahmanor.com/code-surfer/)
-
