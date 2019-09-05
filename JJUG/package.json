@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@glorious/demo": "^0.8.0",
-    "@mdx-deck/themes": "^3.0.8",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "styled-components": "^4.1.3"

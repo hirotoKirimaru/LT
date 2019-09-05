@@ -29,8 +29,7 @@ const IMG = styled.img`
 
 const Avatar = ({ src, opacity = 1}) => {
     return (<IMG
-        src="./images/avater.jpg"
-        alt="たくもんのアイコン"
+        src="./images/avatar.jpg"
     />)
 }
 
