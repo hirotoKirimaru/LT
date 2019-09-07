@@ -42,7 +42,7 @@ export default LayoutAlignCenter
 
 <Avatar />
 
-* 名前：きり丸([@nainaistar](https://twitter.com/nainaistar))
+* 名前：水上　皓登(きり丸)([@nainaistar](https://twitter.com/nainaistar))
 * 仕事：通信会社所属
 * 言語：Java、JavaScript
 
@@ -61,63 +61,85 @@ export default LayoutAlignCenter
 
 ---
 
+export default LayoutAlignCenter
+
+## ParameterizedTestとは
+- 条件だけ変えて、同じテストする
+  - Validationテストに。
+
+---
+
+export default LayoutAlignCenter
+
+## 自分の中での結論
+- ParameterizedTestの中でもArgumentsSourcesが使いやすい！
+
+---
+export default LayoutAlignCenter
+
+## いいところ
+- パラメータ用のテストクラスが使える
+  - 複数パラメータを指定できるので、条件と結果を一覧化できる
+  - テストクラスが使える = lombokが使えるので、失敗した時にIDEで一目瞭然！
+- builderクラスが使えるので、テストの条件がわかりやすくなる！
+
+---
 <CodeSurfer
-  title={()=>(<h3>Code-Surferでできること</h3>)}
-  code={require("!raw-loader!./snippets/my-snippet.js")}
+  title={()=>(<h3>ArgumentsSourceのいいところ</h3>)}
+  code={require("!raw-loader!./snippets/argumentsSource.java")}
   showNumbers={true}
   theme={nightOwl}
-  lang="javascript"
+  lang="java"
   dark={true}
   steps={[
     { notes: ''},
-    { lines: [13], notes: ()=>(<h3>linesで行をハイライト＆ズームできます。</h3>)},
-    { lines: [15], notes: ()=>(<h3>rangeで範囲指定も可能です。</h3>) },
-    { range: [5, 10], notes: ()=>(<h3>こんな感じ😀</h3>) },
-    { lines: [17], notes: ()=>(<h3>tokensで単語文字に絞ることも可能です。</h3>) },
-    { tokens: {17: [18] }, notes: ()=>(<h3>こんな感じ😁</h3>) },
-    { lines: [6], notes: ()=>(<h3>他ファイルからコードを読み込んだり ...</h3>) },
-    { lines: [7], notes: ()=>(<h3>行番号を振ったり ...</h3>) },
-    { lines: [8], notes: ()=>(<h3>テーマ指定も可能です！</h3>) },
+    { lines: [1], notes: ()=>(<h3>アノテーションで指定する</h3>)},
+    { lines: [2,12], notes: ()=>(<h3>ArgumentsProviderを継承したクラスを指定する</h3>) },
+    { range: [17, 25], notes: ()=>(<h3>Overrideでメソッドを継承する</h3>) },
+    { range: [13, 16], notes: ()=>(<h3>対象のパラメータを付与する</h3>) },
+    { range: [8, 11], notes: ()=>(<h3>lombokだとテストしやすくて幸せになれる😊</h3>) },
     { notes: ''},
   ]}
 />
 
 ---
-export default LayoutMarkdown
+export default LayoutAlignCenter
 
-## 👨‍👩‍👦‍👦  まとめ
+<BGImage opacity={1} src={require("file-loader!./images/errorMessage.png")}/>
+---
+---
+export default LayoutAlignCenter
 
-### 📓 MDX-Deck
-* Node.js製スライド作成ツール
-* MDXファイルを作るだけで簡単にスライドが作成できる
-* プレゼンテーション機能が一通りそろっている
-* Reactコンポーネントでリッチなスライドが作れる
-
-### 🏄 Code Surfer
-* MDX-Deckのプラグイン
-* ソースコードプレビューをリッチにしてくれる
-
+<BGImage opacity={1} src={require("file-loader!./images/errorMessage2.png")}/>
 ---
 
-export default LayoutMarkdown
+--- 
+export default LayoutAlignCenter
 
-### MDX-Deckは...
-
-* まだまだ新しいライブラリ
-* [2系でいろんな機能が追加予定](https://github.com/jxnblk/mdx-deck/issues/177)
-* プラグインも3つだけど、もっと増えるはず！
+## 他に検証したParameterizedTest
+- valueSource
+  - 単一項目しか使えない
+- MethodSource
+  - パラメータの紐づけが一目瞭然ではない
+  - staticなメソッドにする必要があるため、builderクラスが使えない
+- EnumSource
+  - テスト結果がenumの名称になってしまった
+  - modeで読めないテストにされる可能性がある
+    - つらい
 
 ---
+export default LayoutAlignCenter
 
-export default Invert
+## 知りたいけど、調査できてないこと
+- IDE上じゃないとパラメータが見えない。
+- CI上でどんな条件で失敗したかわからない！
+- gradleのコマンドから打った時に、  
+パラメータ条件が見えるような仕組みを知りたいので、  
+ご存じの方教えてください😊
 
-<h1>
-  <span>MDX-Deck</span><Sm>と</Sm><span>Code Surfer</span><Sm>で</Sm><br/>
-  <span>スライド<Sm>を</Sm>作ってみませんか</span>
-</h1>
 ---
+<Avatar />
 
+* 名前：水上　皓登(きり丸)([@nainaistar](https://twitter.com/nainaistar))
 
-# :tomato:おしまい:tomato:
-
-##### 🙇 ご清聴ありがとうございました 🙇
+# 🙇 ありがとうございました 🙇
