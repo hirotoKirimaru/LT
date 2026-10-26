@@ -5,7 +5,7 @@ import Theme from './theme'
 import IFRAME from './iframe'
 import Counter from './counter'
 import Sm from './sm'
-import Avatar from './Avatar'
+import Avatar from './avatar'
 
 export {
     BGImage,
